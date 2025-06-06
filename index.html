@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tyylit.css">
+    <title>Hedelmäpeli</title>
+</head>
+<body>
+    <h1>Hedelmäpeli</h1>
+    <div class="pelialue">
+        <div id="raha-div">
+            <div class="rahatiedot">
+                <div id="rahat">Rahaa: <span id="rahamaara">20</span>€</div>
+                <div id="panos">Panos: <span id="panosmaara">1</span>€</div>
+            </div>
+            <div class="osta">
+                <button onclick="ostos()">
+                    <img src="kolikko.webp" alt="1 euro">
+                    <h4>1€</h4>
+                </button>
+                <button onclick="ostos()">
+                    <img src="kolikko.webp" alt="2 euroa">
+                    <h4>2€</h4>
+                </button>
+                <button onclick="ostos()">
+                    <img src="kolikko.webp" alt="3 euroa">
+                    <h4>3€</h4>
+                </button>
+            </div>
+            <div class="pelaa-btn">
+                <button onclick="pelaa()">PELAA</button>
+            </div>
+        </div>
+
+        <div class="keski-div">
+
+            <div id="hedelmat">
+                <div id="ruutu1" class="ruudut">
+                    <img src="omppu.webp" alt="omena">
+                </div>
+                <div id="ruutu2" class="ruudut">
+                    <img src="päärynä.webp" alt="päärynä">
+                </div>
+                <div id="ruutu3" class="ruudut">
+                    <img src="seiska.webp" alt="seiska">
+                </div>
+                <div id="ruutu4" class="ruudut">
+                    <img src="meloni.webp" alt="meloni">
+                </div>
+            </div>
+
+            <div id="lukitse">
+                <div id="lukko1" class="lukot">
+                    <img src="lukko-auki.webp" alt="lukitse ruutu 1" onclick="lukitse()">
+                </div>
+                <div id="lukko2" class="lukot">
+                    <img src="lukko-auki.webp" alt="lukitse ruutu 2" onclick="lukitse()">
+                </div>
+                <div id="lukko3" class="lukot">
+                    <img src="lukko-auki.webp" alt="lukitse ruutu 3" onclick="lukitse()">
+                </div>
+                <div id="lukko4" class="lukot">
+                    <img src="lukko-auki.webp" alt="lukitse ruutu 4" onclick="lukitse()">
+                </div>
+            </div>
+        </div>
+
+        <div class="voittorivit">
+            <table>
+                <td>
+                    <img src="omppu.webp" alt="omena">
+                </td>
+                <td>
+                    <img src="omppu.webp" alt="omena">
+                </td>
+                <td>
+                    <img src="omppu.webp" alt="omena">
+                </td>
+                <td>
+                    <img src="omppu.webp" alt="omena">
+                </td>
+                <td class="voittosumma">
+                    <h4>2</h4>
+                    <img src="kolikko.webp" alt="2 euroa">
+                </td>
+            </table>
+            <table>
+                <td>
+                    <img src="päärynä.webp" alt="päärynä">
+                </td>
+                <td>
+                    <img src="päärynä.webp" alt="päärynä">
+                </td>
+                <td>
+                    <img src="päärynä.webp" alt="päärynä">
+                </td>
+                <td>
+                    <img src="päärynä.webp" alt="päärynä">
+                </td>
+                <td class="voittosumma">
+                    <h4>4</h4>
+                    <img src="kolikko.webp" alt="4 euroa">
+                </td>
+            </table>
+            <table>
+                <td>
+                    <img src="kirsikka.webp" alt="kirsikka">
+                </td>
+                <td>
+                    <img src="kirsikka.webp" alt="kirsikka">
+                </td>
+                <td>
+                    <img src="kirsikka.webp" alt="kirsikka">
+                </td>
+                <td>
+                    <img src="kirsikka.webp" alt="kirsikka">
+                </td>
+                <td class="voittosumma">
+                    <h4>6</h4>
+                    <img src="kolikko.webp" alt="6 euroa">
+                </td>
+            </table>
+            <table>
+                <td>
+                    <img src="meloni.webp" alt="meloni">
+                </td>
+                <td>
+                    <img src="meloni.webp" alt="meloni">
+                </td>
+                <td>
+                    <img src="meloni.webp" alt="meloni">
+                </td>
+                <td>
+                    <img src="meloni.webp" alt="meloni">
+                </td>
+                <td class="voittosumma">
+                    <h4>8</h4>
+                    <img src="kolikko.webp" alt="8 euroa">
+                </td>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
