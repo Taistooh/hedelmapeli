@@ -1,163 +1,190 @@
-h1 {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 4em;
-    color: #bc6c25;
-    text-align: center;
-    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+header {
+   background-color: #ff7d00;
+   color: #78290F;
+   padding: 1rem;
+   text-align: center;
+   border-radius: 20px;
+}
+
+.viesti {
+    font-size: 3rem;
+    color: #001524;
 }
 
 .pelialue {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
 }
 
-#raha-div {
+.vasen-boxi, .oikea-boxi {
     width: 25%;
-    background-color: #fefae0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    color: #bc6c25;
+    background: #FFECD1;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.keski-boxi {
+    width: 50%;
+}
+
+.vasen-boxi {
     text-align: center;
-    padding: 10px;
-    border: #bc6c25, solid, 2px;
-    border-radius: 10px;
+    color: #78290F;
 }
 
-.rahatiedot {
+.keskita {
+    text-align: center;
+    color: #001524;
     font-weight: bold;
-    padding: 5px;
-    margin-bottom: 50px;
+    margin-top: 1rem;
 }
 
-.osta {
+.icon-buttons {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
-button {
+.icon-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #bc6c25;
-    font-weight: bold;
-    font-size: 1em;
-    border: #bc6c25, solid, 2px;
-    border-radius: 10px
+    padding: 20px;
 }
 
-button:hover {
-    cursor: pointer;
-}
-
-button img {
+.icon-button img {
     width: 50px;
     height: 50px;
-    padding: 5px;
+}
+
+.icon-button:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .pelaa-btn {
-    padding: 40px;
-    justify-items: center;
-}
-
-.pelaa-btn button {
-    padding: 20px;
-    background-color: #606c38;
-    color: #fefae0;
-    border: #283618, solid, 2px;
-    font-size: 2.5em;
-}
-
-.pelaa-btn button:hover {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 1rem auto 0;
+    background-color: #001524;
+    color: #15616D;
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.keski-div {
-    background-color: #fefae0;
-    width: 30%;
-    padding: 10px;
-    border: #bc6c25, solid, 2px;
-    border-radius: 10px;
+.pelaa-btn:hover {
+    background-color: #15616D;
+    color: #001524;
+    transition: background-color 0.3s ease;
 }
 
-#hedelmat {
+.alaosa {
+    padding: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-#hedelmat img {
-    width: 90px;
-    height: 90px;
-}
-
-.ruudut {
-    background-color: white;
-    border: #bc6c25, solid, 2px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-#lukitse {
+.keski-boxi {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding: 1rem;
+    background-color: #FFECD1;
 }
 
-#lukitse img {
-    width: 90px;
-    height: 90px;
+.hedelmat {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
-#lukitse img:hover {
+.hedelmat img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    border: 1px solid #001524;
+    border-radius: 4px;
+}
+
+.hedelmat img:hover {
     cursor: pointer;
+    opacity: .5;
 }
 
 .lukot {
-    background-color: white;
-    border: #bc6c25, solid, 2px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 40px;
-}
-.voittorivit {
-    background-color: #fefae0;
-    width: 20%;
-    border: #bc6c25, solid, 2px;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-table img {
-    width: 50px;
-    height: 50px;
+.lukittu {
+    border: 3px solid red;
+}
+.item-row {
+    margin: 1rem;
 }
 
-td {
-    padding: 10px;
-}
-
-.voittosumma {
+.item{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border: #bc6c25, solid, 2px;
-    border-radius: 10px;
-    padding: 5px;  
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.voittosumma h4 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    color: #bc6c25;
+.item img {
+    width: 40px;
+    height: 40px;
+}
+
+.item span {
+    color: #78290F;
     font-weight: bold;
-    padding: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-.voittosumma img {
-    margin-top: 10px;
+@media only screen and (max-width: 1133px) {
+    .pelialue {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .vasen-boxi, .oikea-boxi {
+        width: 50%;
+        float: left;
+    }
+
+    .keski-boxi {
+        width: 100%;
+        clear: both;
+    }
+
+    .hedelmat {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .item {
+        justify-content: center;
+    }
 }
