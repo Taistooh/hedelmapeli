@@ -44,11 +44,12 @@ header {
 .vasen-boxi {
     text-align: center;
     color: #78290F;
+    font-size: 1.5rem;
 }
 
 .keskita {
     text-align: center;
-    color: #001524;
+    color: #78290F;
     font-weight: bold;
     margin-top: 1rem;
 }
@@ -134,7 +135,12 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    margin-top: 2rem;
+}
+
+.lukot img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
 }
 
 .item-row {
@@ -160,7 +166,19 @@ header {
     margin-right: 1rem;
 }
 
-@media only screen and (max-width: 1133px) {
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff7d00;
+    padding: 0.1em;
+    font-size: 1em;
+    text-align: center;
+    color: #78290F;
+}
+
+@media only screen and (max-width: 1033px) {
     .pelialue {
         display: flex;
         flex-wrap: wrap;

@@ -10,14 +10,13 @@
     <header>
         <h1>Hedelmäpeli</h1>
     </header>
-
     <div class="viesti" id="viesti"></div>
-    
     <main class="pelialue">
 
         <div class="vasen-boxi">
             <div class="keskita">
-                <div id="rahat">Rahaa: <span id="rahamaara">50</span>€</div>
+                <div id="rahat">Rahaa:<br />
+                    <span id="rahamaara">50</span>€</div>
                 <div id="panos">Panos: <span id="panosmaara">0</span>€</div>
             </div>
             <div class="icon-buttons">
@@ -92,13 +91,26 @@
                 <div class="img-slot"><img src="seiska.webp" id="slot3" onclick="lukitse(3)"></div>
                 <div class="img-slot"><img src="meloni.webp" id="slot4" onclick="lukitse(4)"></div>
             </div>
+            <div class="lukot">
+                <button class="lukitse-btn" id="lukitseSlot-1">
+                    <img src="lukko.webp" alt="Lukitse ruutu 1"/>
+                </button>
+                <button class="lukitse-btn" id="lukitseSlot-2">
+                    <img src="lukko.webp" alt="Lukitse ruutu 2"/>
+                </button>
+                <button class="lukitse-btn" id="lukitseSlot-3">
+                    <img src="lukko.webp" alt="Lukitse ruutu 3"/>
+                </button>
+                <button class="lukitse-btn" id="lukitseSlot-4">
+                    <img src="lukko.webp" alt="Lukitse ruutu 4"/>
+                </button>
+            </div>
             <button class="pelaa-btn" onclick="pelaa()">PELAA</button>
         </section>
     </div>
-
+    <footer>
+        <p>&copy; Tanja Heino 2025 Hedelmäpeli</p>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
-
-//Lukitus ja if on lukittu
-//If tulee suora
