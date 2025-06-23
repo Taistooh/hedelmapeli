@@ -4,110 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tyylit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" 
+    crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Protest+Revolution&display=swap" 
+    rel="stylesheet">
     <title>Hedelmäpeli</title>
 </head>
 <body>
     <header>
-        <h1>Hedelmäpeli</h1>
+        <h1 class="henny-penny-regular">Hedelmäpeli</h1>
     </header>
     <div class="viesti" id="viesti"></div>
     <main class="pelialue">
 
         <div class="vasen-boxi">
             <div class="keskita">
-                <div id="rahat">Rahaa:<br />
-                    <span id="rahamaara">50</span>€</div>
+                <div id="rahat">Rahaa: <span id="rahamaara">50</span>€</div>
                 <div id="panos">Panos: <span id="panosmaara">0</span>€</div>
             </div>
             <div class="icon-buttons">
                 <div class="icon-button">
-                    <img src="kolikko.webp" alt="1 euro" onclick="nostaPanosta(1)">
+                    <img src="kolikko.webp" alt="1 euro" onclick="asetaPanos(1)">
                     <h4>1€</h4>
                 </div>
                 <div class="icon-button">
-                    <img src="kolikko.webp" alt="2 euroa" onclick="nostaPanosta(2)">
+                    <img src="kolikko.webp" alt="2 euroa" onclick="asetaPanos(2)">
                     <h4>2€</h4>
                 </div>
                 <div class="icon-button">
-                    <img src="kolikko.webp" alt="3 euroa" onclick="nostaPanosta(3)">
+                    <img src="kolikko.webp" alt="3 euroa" onclick="asetaPanos(3)">
                     <h4>3€</h4>
                 </div>
             </div>
         </div>
         
+        <div class="keski-boxi">
+            <div class="hedelmat">
+                <div class="img-slot"><img src="kuvat/omppu.webp" id="slot1" onclick="lukitse(1)"></div>
+                <div class="img-slot"><img src="kuvat/päärynä.webp" id="slot2" onclick="lukitse(2)"></div>
+                <div class="img-slot"><img src="kuvat/seiska.webp" id="slot3" onclick="lukitse(3)"></div>
+                <div class="img-slot"><img src="kuvat/meloni.webp" id="slot4" onclick="lukitse(4)"></div>
+            </div>
+            <div class="lukot">
+                <button class="lukitse-btn" id="lukko1" onclick="lukitus(1)">
+                    <img src="lukko-auki.webp" alt="Lukitse ruutu 1"/>
+                </button>
+                <button class="lukitse-btn" id="lukko2" onclick="lukitus(2)">
+                    <img src="lukko-auki.webp" alt="Lukitse ruutu 2"/>
+                </button>
+                <button class="lukitse-btn" id="lukko3" onclick="lukitus(3)">
+                    <img src="lukko-auki.webp" alt="Lukitse ruutu 3"/>
+                </button>
+                <button class="lukitse-btn" id="lukko4" onclick="lukitus(4)">
+                    <img src="lukko-auki.webp" alt="Lukitse ruutu 4"/>
+                </button>
+            </div>
+            <button class="pelaa-btn" onclick="pelaa()">PELAA</button>
+        </div>
+        
         <div class="oikea-boxi">
             <div class="item-row">
                 <div class="item">
-                    <img src="omppu.webp" alt="omena">
-                    <img src="omppu.webp" alt="omena">
-                    <img src="omppu.webp" alt="omena">
-                    <img src="omppu.webp" alt="omena">
-                    <span>2€</span>
+                    <img src="kuvat/kirsikka.webp" alt="kirsikka">
+                    <img src="kuvat/kirsikka.webp" alt="kirsikka">
+                    <img src="kuvat/kirsikka.webp" alt="kirsikka">
+                    <img src="kuvat/kirsikka.webp" alt="kirsikka">
+                    <span>3x</span>
                 </div>
             </div>
             <div class="item-row">
                 <div class="item">
-                    <img src="päärynä.webp" alt="päärynä">
-                    <img src="päärynä.webp" alt="päärynä">
-                    <img src="päärynä.webp" alt="päärynä">
-                    <img src="päärynä.webp" alt="päärynä">
-                    <span>4€</span>
+                    <img src="kuvat/päärynä.webp" alt="päärynä">
+                    <img src="kuvat/päärynä.webp" alt="päärynä">
+                    <img src="kuvat/päärynä.webp" alt="päärynä">
+                    <img src="kuvat/päärynä.webp" alt="päärynä">
+                    <span>4x</span>
                 </div>
             </div>
             <div class="item-row">
                 <div class="item">
-                    <img src="kirsikka.webp" alt="kirsikka">
-                    <img src="kirsikka.webp" alt="kirsikka">
-                    <img src="kirsikka.webp" alt="kirsikka">
-                    <img src="kirsikka.webp" alt="kirsikka">
-                    <span>6€</span>
+                    <img src="kuvat/meloni.webp" alt="meloni">
+                    <img src="kuvat/meloni.webp" alt="meloni">
+                    <img src="kuvat/meloni.webp" alt="meloni">
+                    <img src="kuvat/meloni.webp" alt="meloni">
+                    <span>5x</span>
                 </div>
             </div>
             <div class="item-row">
                 <div class="item">
-                    <img src="meloni.webp" alt="meloni">
-                    <img src="meloni.webp" alt="meloni">
-                    <img src="meloni.webp" alt="meloni">
-                    <img src="meloni.webp" alt="meloni">
-                    <span>8€</span>
+                    <img src="kuvat/omppu.webp" alt="omena">
+                    <img src="kuvat/omppu.webp"alt="omena">
+                    <img src="kuvat/omppu.webp" alt="omena">
+                    <img src="kuvat/omppu.webp" alt="omena">
+                    <span>6x</span>
                 </div>
             </div>
             <div class="item-row">
                 <div class="item">
-                    <img src="seiska.webp" alt="seiska">
-                    <img src="seiska.webp" alt="seiska">
-                    <img src="seiska.webp" alt="seiska">
-                    <img src="seiska.webp" alt="seiska">
-                    <span>10€</span>
+                    <img src="kuvat/seiska.webp" alt="seiska">
+                    <img src="kuvat/seiska.webp" alt="seiska">
+                    <img src="kuvat/seiska.webp" alt="seiska">
+                    <img src="kuvat/seiska.webp" alt="seiska">
+                    <span>10x</span>
                 </div>
             </div>
         </div>
     </main>
-    <div class="alaosa">
-        <section class="keski-boxi">
-            <div class="hedelmat">
-                <div class="img-slot"><img src="omppu.webp" id="slot1" onclick="lukitse(1)"></div>
-                <div class="img-slot"><img src="päärynä.webp" id="slot2" onclick="lukitse(2)"></div>
-                <div class="img-slot"><img src="seiska.webp" id="slot3" onclick="lukitse(3)"></div>
-                <div class="img-slot"><img src="meloni.webp" id="slot4" onclick="lukitse(4)"></div>
-            </div>
-            <div class="lukot">
-                <button class="lukitse-btn" id="lukitseSlot-1">
-                    <img src="lukko.webp" alt="Lukitse ruutu 1"/>
-                </button>
-                <button class="lukitse-btn" id="lukitseSlot-2">
-                    <img src="lukko.webp" alt="Lukitse ruutu 2"/>
-                </button>
-                <button class="lukitse-btn" id="lukitseSlot-3">
-                    <img src="lukko.webp" alt="Lukitse ruutu 3"/>
-                </button>
-                <button class="lukitse-btn" id="lukitseSlot-4">
-                    <img src="lukko.webp" alt="Lukitse ruutu 4"/>
-                </button>
-            </div>
-            <button class="pelaa-btn" onclick="pelaa()">PELAA</button>
-        </section>
-    </div>
     <footer>
         <p>&copy; Tanja Heino 2025 Hedelmäpeli</p>
     </footer>

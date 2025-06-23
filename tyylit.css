@@ -1,3 +1,10 @@
+.henny-penny-regular {
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,14 +19,16 @@ body {
 header {
    background-color: #ff7d00;
    color: #78290F;
+   font-size: 1.5rem;
    padding: 1rem;
    text-align: center;
    border-radius: 20px;
 }
 
 .viesti {
-    font-size: 3rem;
-    color: #001524;
+    font-size: 2rem;
+    color: #78290F;
+    text-align: center;
 }
 
 .pelialue {
@@ -33,6 +42,7 @@ header {
 .vasen-boxi, .oikea-boxi {
     width: 25%;
     background: #FFECD1;
+    color: #78290F;
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -43,7 +53,6 @@ header {
 
 .vasen-boxi {
     text-align: center;
-    color: #78290F;
     font-size: 1.5rem;
 }
 
@@ -97,17 +106,11 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.alaosa {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-}
-
 .keski-boxi {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 40%;
     padding: 1rem;
     background-color: #FFECD1;
 }
@@ -135,6 +138,11 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+}
+
+.lukot img:hover {
+    cursor: pointer;
+    -webkit-filter: brightness(70%);
 }
 
 .lukot img{
